@@ -1,0 +1,25 @@
+ALGORITHM checkpoint_6
+VAR
+    n,v: INTEGER :=0; 
+    w:INTEGER :=1;
+    s : STRING;
+
+
+BEGIN
+
+    Read(s)
+    REPEAT
+        IF (s[n]=" ") THEN
+            w:=n+1;
+        END_IF
+        // if the space exists it means that we already have a word thats why our conter starts with 1
+        IF (s[n]in["a","e","i","o","u","y"]) THEN
+            v:=v+1;
+        END_IF
+        n:=n+1;
+    UNTIL (s[n]=".")
+    write("The length of the sentence is :",n)
+    write("The number of words in the sentence is :",w)
+    write("The number of vowels in the sentence is :";v)
+    
+END
